@@ -1,0 +1,42 @@
+{
+  "name": "@koenbrouwer/find-path-by-value",
+  "version": "1.0.0",
+  "description": "A little NodeJS package with a single function that returns the path inside a haystack object where a needle as value was found.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+	"dist/**/*"
+  ],
+  "scripts": {
+	"build": "tsc",
+	"prepare": "npm run build && npm test",
+	"publish:next": "npm publish --tag=next",
+	"publish:latest": "npm publish",
+	"dev": "nodemon index.ts",
+	"test": "jest"
+  },
+  "keywords": ["object-deep", "path", "pathfinder"],
+  "author": {
+	"name": "Koen Brouwer",
+	"email": "hi@koenbrouwer.com",
+	"url": "https://twitter.com/KoenBrouwer"
+  },
+  "repository": {
+	"type": "git",
+	"url": "git+https://github.com/KoenBrouwer/find-path-by-value.git"
+  },
+  "bugs": "https://github.com/KoenBrouwer/find-path-by-value/issues",
+  "homepage": "https://github.com/KoenBrouwer/find-path-by-value#readme",
+  "license": "MIT",
+  "dependencies": {
+	"jsonpath": "^1.1.1"
+  },
+  "devDependencies": {
+	"ts-node": "^10.1.0"
+	"@babel/preset-env": "^7.14.7",
+	"@babel/preset-typescript": "^7.14.5",
+	"@types/jest": "^26.0.24",
+	"@types/jsonpath": "^0.2.0",
+	"jest": "^27.0.6"
+  }
+}
